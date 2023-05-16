@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+</head>
+<body style="background-color: bisque;">
+    <h1 style= font-size:50px; align="center">PURCHASE PREDICTION OF PRODUCTS BASED ON CUSTOMER BEHAVIOUR</h1>
+    <div style="color: black;font-size: 30px;font-family: 'Times New Roman', Times, serif;" class="login" align="center" >
+    <!-- <h1>Customer Behaviour Prediction</h1> -->
+    <form action="{{url_for('predict')}}" method="post" align="center" style="padding-top: 40px;">
+        <label style="color: black;font-size: 30px;font-family: 'Times New Roman', Times, serif;" for="input1">Age:</label>
+        <input type="number" name="input1" required><br><br>
+        
+        <label style="color: black;font-size: 30px;font-family: 'Times New Roman', Times, serif;" for="input2">Salary:</label>
+        <input type="number" name="input2" required><br><br>
+        
+        <label style="color: black;font-size: 30px;font-family: 'Times New Roman', Times, serif;" for="input3">Expenditure Allowance:</label>
+        <input type="number" name="input3" required><br><br>
+        
+        <label style="color: black;font-size: 30px;font-family: 'Times New Roman', Times, serif;" for="input4">No.of views of the product:</label>
+        <input type="number" name="input4" required><br><br><br>
+
+        <button style="background: rgb(19, 19, 3); color: rgb(255, 255, 255);padding-bottom: 30px; padding: 15px 40px;font-size: 30px;font-family: 'Times New Roman', Times, serif;" type="PREDICT" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+    </div>
+</body>
+</html>
